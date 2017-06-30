@@ -15,3 +15,6 @@ FOUNDATION_EXPORT double UILoggerVersionNumber;
 FOUNDATION_EXPORT const unsigned char UILoggerVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <UILogger/PublicHeader.h>
+
+#import "UILoggerView.h"
+#import "FileChangeObserver.h"

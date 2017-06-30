@@ -21,12 +21,20 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		B70C10BA1F06A47400F9C123 /* UILoggerView.h in Headers */ = {isa = PBXBuildFile; fileRef = B70C10B81F06A47400F9C123 /* UILoggerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B70C10BB1F06A47400F9C123 /* UILoggerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B70C10B91F06A47400F9C123 /* UILoggerView.m */; };
+		B70C10BE1F06A6CD00F9C123 /* FileChangeObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = B70C10BC1F06A6CD00F9C123 /* FileChangeObserver.m */; };
+		B70C10BF1F06A6CD00F9C123 /* FileChangeObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = B70C10BD1F06A6CD00F9C123 /* FileChangeObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB33B6991B09DC2100626B6F /* UILogger.h in Headers */ = {isa = PBXBuildFile; fileRef = CB33B6981B09DC2100626B6F /* UILogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBF769C31B09E34300E0ECE3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF769C21B09E34300E0ECE3 /* Foundation.framework */; };
 		CBF769C51B09E34A00E0ECE3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF769C41B09E34A00E0ECE3 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B70C10B81F06A47400F9C123 /* UILoggerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILoggerView.h; sourceTree = "<group>"; };
+		B70C10B91F06A47400F9C123 /* UILoggerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILoggerView.m; sourceTree = "<group>"; };
+		B70C10BC1F06A6CD00F9C123 /* FileChangeObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileChangeObserver.m; sourceTree = "<group>"; };
+		B70C10BD1F06A6CD00F9C123 /* FileChangeObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileChangeObserver.h; sourceTree = "<group>"; };
 		CB33B6931B09DC2100626B6F /* UILogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UILogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB33B6971B09DC2100626B6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB33B6981B09DC2100626B6F /* UILogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILogger.h; sourceTree = "<group>"; };
@@ -69,6 +77,10 @@
 			isa = PBXGroup;
 			children = (
 				CB33B6981B09DC2100626B6F /* UILogger.h */,
+				B70C10B81F06A47400F9C123 /* UILoggerView.h */,
+				B70C10B91F06A47400F9C123 /* UILoggerView.m */,
+				B70C10BD1F06A6CD00F9C123 /* FileChangeObserver.h */,
+				B70C10BC1F06A6CD00F9C123 /* FileChangeObserver.m */,
 				CB33B6961B09DC2100626B6F /* Supporting Files */,
 			);
 			path = UILogger;
@@ -90,6 +102,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB33B6991B09DC2100626B6F /* UILogger.h in Headers */,
+				B70C10BA1F06A47400F9C123 /* UILoggerView.h in Headers */,
+				B70C10BF1F06A6CD00F9C123 /* FileChangeObserver.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +134,7 @@
 		CB33B68A1B09DC2100626B6F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Dimitris Bouzikas";
 				TargetAttributes = {
 					CB33B6921B09DC2100626B6F = {
@@ -180,6 +194,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B70C10BB1F06A47400F9C123 /* UILoggerView.m in Sources */,
+				B70C10BE1F06A6CD00F9C123 /* FileChangeObserver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,8 +215,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -208,6 +226,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -246,8 +265,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -277,6 +298,7 @@
 		CB33B6AA1B09DC2100626B6F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -291,6 +313,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "bouzikas.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -299,6 +322,7 @@
 		CB33B6AB1B09DC2100626B6F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -313,6 +337,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "bouzikas.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
